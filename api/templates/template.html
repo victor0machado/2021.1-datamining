@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Iris - Demonstração</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <h1>Dados da flor</h1>
+        <form action="/verificar" method="post">
+          <div class="form-group row">
+            <label for="sepal_length" class="col-sm-2 col-form-label">Comprimento da Sépala</label>
+            <div class="col-sm-3">
+              <input type="value" class="form-control" id="sepal_length"  value="0" name="sepal_length">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="sepal_width" class="col-sm-2 col-form-label">Largura da Sépala</label>
+            <div class="col-sm-3">
+              <input type="value" class="form-control" id="sepal_width"  value="0" name="sepal_width">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="petal_length" class="col-sm-2 col-form-label">Comprimento da Pétala</label>
+            <div class="col-sm-3">
+              <input type="value" class="form-control" id="petal_length"  value="0" name="petal_length">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="petal_width" class="col-sm-2 col-form-label">Largura da Pétala</label>
+            <div class="col-sm-3">
+              <input type="value" class="form-control" id="petal_width"  value="0" name="petal_width">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Verificar</button>
+            </div>
+          </div>
+        </form>
+
+
+        <!-- {% if species %} -->
+            {% if species == "setosa" %}
+                <div style="display:table-cell; vertical-align:middle; text-align:center">
+                    <img src="static/setosa.jpg" width="300px" align="center">
+                </div>
+            {% elif species == "versicolor" %}
+                <div style="display:table-cell; vertical-align:middle; text-align:center">
+                    <img src="static/versicolor.jpg" width="300px" align="center">
+                </div>
+            {% else %}
+                <div style="display:table-cell; vertical-align:middle; text-align:center">
+                    <img src="static/virginica.jpg" width="300px" align="center">
+                </div>
+            {% endif %}
+        <!-- {% endif %} -->
+    <!-- FIM DO CONTAINER-->
+    </div>
+  </body>
+
+
+
+</html>
